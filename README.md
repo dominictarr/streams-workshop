@@ -25,6 +25,10 @@ proxy one port to another, and make sure you handle disconnections properly.
 
 create a simple chat room, with ofline ability, and automatic reconnects.
 
-## see also
+## cool links
 
-[Writing Custom Streams](https://github.com/dominictarr/presentations/blob/master/writing-custom-streams.md)
+* [Writing Custom Streams](https://github.com/dominictarr/presentations/blob/master/writing-custom-streams.md)
+
+* [Harnessing the Power of Streams](http://www.youtube.com/watch?v=lQAV3bPOYHo)
+
+* [Stream Handbook](https://github.com/substack/stream-handbook)
