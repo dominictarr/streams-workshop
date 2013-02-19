@@ -25,4 +25,6 @@ proxy one port to another, and make sure you handle disconnections properly.
 
 create a simple chat room, with ofline ability, and automatic reconnects.
 
+## see also
 
+[Writing Custom Streams](https://github.com/dominictarr/presentations/blob/master/writing-custom-streams.md)
