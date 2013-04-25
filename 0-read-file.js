@@ -1,4 +1,3 @@
-
 var fs = require('fs')
 
 fs.readFile('./npm.json', function (err, data) {

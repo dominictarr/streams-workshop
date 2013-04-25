@@ -7,12 +7,12 @@ console.error('reading file')
 fs.readFile('./mini-npm.json', function (err, buf) {
   if(err) throw err
   console.error('compressing')
-//  zlib.gzip(buf, function (err, buf) {
-    //if(err) throw err
+  zlib.gzip(buf, function (err, buf) {
+    if(err) throw err
     console.error('writing file')
     fs.writeFile('./mini-npm.json.gz', buf, function (err) {
       if(err) throw err
       console.error('done')
     })
-  //})
+  })
 })
