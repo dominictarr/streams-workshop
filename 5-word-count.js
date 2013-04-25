@@ -21,7 +21,7 @@ var proto = NoopStream.prototype
 proto.write = function (data) {
   var self = this
   if(data)
-    data.split(/[^\w]+/).forEach(function (d) {
+    data.split().forEach(function (d) {
       self.emit('data', d.toUpperCase() + '\n')
     })
   return true
@@ -32,10 +32,17 @@ proto.end = function () {
 }
 
 var n = 0, js
-fs.createReadStream('../npm.json')
-  //or use request
+var words = {}
+//or use request
+fs.createReadStream('./npm.json')
   .pipe(JSONStream.parse(['rows', true, 'doc', 'readme']))
-  .pipe(new NoopStream())
-  .pipe(process.stdout)
+  .pipe(through(function (e) {
+    if('string' === typeof e)
+      e.split(/[^\w]+/).forEach(function (word) {
+        words[word] = (words[word] || 0) + 1
+      })
+  }, function () {
+    console.error(words)
+  }))
 
 

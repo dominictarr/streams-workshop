@@ -25,7 +25,7 @@ else {
 
   function connect () {
 
-  var stream = net.connect(opts.port || 8989, opts.host || '192.168.0.120')
+  var stream = net.connect(opts.port || 8989, opts.host)
 
   stream.pipe(chat.createStream()).pipe(stream)
     .on('error', function () {
