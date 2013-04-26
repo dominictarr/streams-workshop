@@ -1,12 +1,12 @@
 {
   "name": "streams-workshop",
-  "description": "streams workshop for campjs",
-  "version": "0.0.0",
-  "homepage": "https://github.com/dominictarr/streams-workshop",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/dominictarr/streams-workshop.git"
-  },
+  "description": "streams workshop",
+  "version": "0.0.1",
+  "author":
+  "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "homepage":
+    "https://github.com/dominictarr/streams-workshop",
+
   "dependencies": {
     "through": "~2.2.0",
     "JSONStream": "~0.6.4",
@@ -17,7 +17,12 @@
     "optimist": "~0.4.0",
     "reconnect": "~1.1.1"
   },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/streams-workshop.git"
+  },
+
   "devDependencies": {},
-  "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
   "license": "MIT"
 }
